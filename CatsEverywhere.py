@@ -2,8 +2,8 @@ class Cat:
     species = 'mammal'
 
     def __init__(self, name, age):
-        self.name = name
-        self.age = age
+        self._name = name #private variable as a convention
+        self._age = age
 
     def oldest_cat(*args):
         return max(args)
@@ -14,6 +14,9 @@ class Cat:
     @staticmethod
     def adding_things2(age1, age2):
         return age1 + age2
+
+
+# Make sure not to override a private variable based on the agreed convention. There is no really privacy in Python.
 
 cat1= Cat('cat1', 23)
 cat2 = Cat('cat2', 34)
